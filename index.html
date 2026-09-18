@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorador de Personajes</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+  <!-- 1. Header con título principal y subtítulo descriptivo -->
+  <header>
+    <h1>Explorador de Personajes</h1>
+    <p>Descubre y explora la lista de personajes obtenidos desde la API</p>
+  </header>
+
+  <main>
+    <!-- 2. Section de controles con botón -->
+    <section id="controles">
+      <button id="btn-cargar" type="button">Cargar Personajes</button>
+    </section>
+
+    <!-- 3. Section de loading (oculto por defecto) -->
+    <section id="loading" hidden aria-live="polite">
+      <div class="spinner" role="status"></div>
+      <p>Cargando personajes...</p>
+    </section>
+
+    <!-- 4. Div para mensajes de error (oculto por defecto) -->
+    <div id="mensaje-error" hidden role="alert"></div>
+
+    <!-- 5. Section para mostrar los personajes -->
+    <section id="contenedor-personajes" aria-label="Lista de personajes">
+      <!-- Las tarjetas de los personajes se agregarán dinámicamente desde JS -->
+    </section>
+  </main>
+
+  <!-- 6. Footer con enlace a la documentación de la API -->
+  <footer>
+    <p>
+      Documentación oficial: 
+      <a href="https://thesimpsonsapi.com" target="_blank" rel="noopener noreferrer">
+        The Simpsons API Documentation
+      </a>
+    </p>
+  </footer>
+
+  <!-- 7. Script tag importado como módulo -->
+  <script type="module" src="./dist/main.js"></script>
+
+</body>
+</html>
+
+<!-- DATOS QUE DEVUELVE LA API. En este caso utilicé el ID 14
+ {
+    "id": 14,
+    "age": null,
+    "birthdate": null,
+    "description": "Waylon Joseph Smithers, Jr., better known as Mr. Smithers, Waylon Smithers or simply Smithers, (born December 25) is a recurring character on The Simpsons. He is also a minor character in The Simpsons Movie.",
+    "first_appearance_ep_id": 1,
+    "first_appearance_sh_id": null,
+    "gender": "Male",
+    "name": "Waylon Smithers, Jr.",
+    "occupation": "Assistant to Mr. Burns",
+    "phrases": [
+        "Yes, sir?",
+        "Thats Homer Simpson, sir - one of your [put-down]s from Sector 7G.",
+        "Actually, I value every second were together: from the moment I squeeze his orange juice in the morning, till I... tuck him in at night. Hes not just my boss, hes my best friend, too.",
+        "All right, thats it. You know, I used to wonder why Mr. Burns hated humanity. Now I know. You open your heart and they mock your very decency."
+    ],
+    "portrait_path": "/character/14.webp",
+    "status": "Alive",
+    "first_appearance_ep": {
+        "id": 1,
+        "airdate": "1989-12-17",
+        "description": "\"Simpsons Roasting on an Open Fire\" (also known as \"The Simpsons Christmas Special\") is the first episode of Season 1 of The Simpsons, as well as the series premiere/pilot episode of the series. It is the show's only episode to be aired in the 1980s. (Minus the original shorts.)",
+        "episode_number": 1,
+        "image_path": "/episode/1.webp",
+        "name": "Simpsons Roasting on an Open Fire",
+        "season": 1,
+        "synopsis": "When Mr. Burns announces that none of the workers will be getting Christmas bonuses and Marge reveals that she spent the extra Christmas gift money on getting Bart's \"Mother\" tattoo removed, Homer keeps his lack of funds for the holidays a secret and gets a job as a mall Santa."
+    },
+    "first_appearance_sh": null
+} -->
